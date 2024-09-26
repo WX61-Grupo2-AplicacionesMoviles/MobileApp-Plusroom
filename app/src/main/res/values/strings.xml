@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">MobileApp-Plusroom</string>
+    <string name="welcome_n_nto_complete_">To complete your registration, we recommend that you complete your information to improve your profile.</string>
+    <string name="set_your_profile">Set your profile</string>
+    <string name="see_my_profile">See my profile</string>
 </resources>
