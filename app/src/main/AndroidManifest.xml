@@ -28,6 +28,12 @@
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
+            android:name=".SendMessageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReceivedMessageActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
