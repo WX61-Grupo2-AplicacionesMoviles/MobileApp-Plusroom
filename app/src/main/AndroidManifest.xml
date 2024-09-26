@@ -16,6 +16,9 @@
             android:name=".PostActivity"
             android:exported="false" />
         <activity
+            android:name=".CustomerActivity"
+            android:exported="false" />
+        <activity
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity
