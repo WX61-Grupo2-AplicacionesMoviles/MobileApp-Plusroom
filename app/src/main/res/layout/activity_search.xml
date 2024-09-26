@@ -29,24 +29,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/btApartment"
         tools:text="Categoría" />
 
     <Button
         android:id="@+id/btHousing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_width="108dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
         android:backgroundTint="@color/skyblue"
+        android:paddingLeft="6dp"
+        android:paddingTop="2dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="2dp"
         android:text="@string/viviendas"
         android:textColor="#064789"
+        android:textSize="12sp"
         app:cornerRadius="7dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btRooms"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btRooms" />
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toEndOf="@+id/btRooms" />
 
     <TextView
         android:id="@+id/tvSearchTitle"
@@ -63,23 +68,30 @@
 
     <Button
         android:id="@+id/btApartment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_width="108dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="@color/skyblue"
+        android:paddingLeft="6dp"
+        android:paddingTop="2dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="2dp"
         android:text="@string/departamento"
         android:textColor="#064789"
+        android:textSize="12sp"
         app:cornerRadius="7dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btRooms"
+        app:layout_constraintHorizontal_bias="0.195"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPropertiesLinkView" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:textColorHint="@color/material_dynamic_neutral40"
         app:endIconDrawable="?android:attr/actionModeWebSearchDrawable"
@@ -97,35 +109,28 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btCommercialProperty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:backgroundTint="@color/skyblue"
-        android:text="@string/locales_comerciales"
-        android:textColor="#064789"
-        app:cornerRadius="7dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btApartment" />
-
-    <Button
         android:id="@+id/btRooms"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_width="108dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="23dp"
         android:backgroundTint="@color/skyblue"
+        android:paddingLeft="6dp"
+        android:paddingTop="2dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="2dp"
         android:text="@string/cuartos"
         android:textColor="#064789"
+        android:textSize="12sp"
         app:cornerRadius="7dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btCommercialProperty" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/btApartment"
+        app:layout_constraintEnd_toStartOf="@+id/btHousing"
+        app:layout_constraintStart_toEndOf="@+id/btApartment" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvPosts"
         android:layout_width="0dp"
-        android:layout_height="400dp"
+        android:layout_height="320dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="80dp"
@@ -133,5 +138,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
+
+    <TextView
+        android:id="@+id/tvPropertiesLinkView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="13dp"
+        android:text="Inmuebles"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <TextView
+        android:id="@+id/tvRoomiesLinkView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="104dp"
+        android:text="Roomies"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvPropertiesLinkView"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

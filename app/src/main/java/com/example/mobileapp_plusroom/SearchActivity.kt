@@ -2,6 +2,7 @@ package com.example.mobileapp_plusroom
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -23,23 +24,15 @@ class SearchActivity : AppCompatActivity() {
 
         val tvCategory: TextView = findViewById(R.id.tvCategory)
         val btApartment: Button = findViewById(R.id.btApartment)
-        val btCommercialProperty: Button = findViewById(R.id.btCommercialProperty)
         val btRoom: Button = findViewById(R.id.btRooms)
         val btHouse: Button = findViewById(R.id.btHousing)
 
         fun changeVisibility() {
-            btApartment.visibility = View.GONE
-            btCommercialProperty.visibility = View.GONE
-            btRoom.visibility = View.GONE
-            btHouse.visibility = View.GONE
+
         }
 
         btApartment.setOnClickListener {
             tvCategory.text = "Departamentos"
-            changeVisibility()
-        }
-        btCommercialProperty.setOnClickListener {
-            tvCategory.text = "Locales comerciales"
             changeVisibility()
         }
         btRoom.setOnClickListener {
@@ -50,6 +43,17 @@ class SearchActivity : AppCompatActivity() {
             tvCategory.text = "Viviendas"
             changeVisibility()
         }
+
+        val tvProperties: TextView = findViewById(R.id.tvPropertiesLinkView)
+        val tvRoomies: TextView = findViewById(R.id.tvRoomiesLinkView)
+
+        tvProperties.setOnClickListener {
+
+        }
+        tvRoomies.setOnClickListener {
+
+        }
+
 
         val btReceivedMessage: Button = findViewById(R.id.btGotoReceivedMessage)
 
