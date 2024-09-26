@@ -9,50 +9,39 @@
     tools:context=".PostActivity">
 
 
-    <ImageView
-        android:id="@+id/ivProperty"
-        android:layout_width="261dp"
-        android:layout_height="180dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/room" />
-
     <Button
         android:id="@+id/btViewAuthorProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:backgroundTint="@color/white2"
         android:text="Ver Perfil del autor"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivProperty" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <Button
         android:id="@+id/btBook"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="80dp"
         android:backgroundTint="@color/blue80"
         android:text="Reserve"
+        android:textColor="#FFFFFF"
         app:cornerRadius="7dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btViewAuthorProfile" />
 
     <View
         android:id="@+id/view4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="307dp"
+        android:layout_height="348dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="68dp"
         android:background="@drawable/rounded_post_ui"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,11 +54,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="2dp"
+        android:text="Ubicación del inmueble"
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@+id/view4"
-        app:layout_constraintTop_toBottomOf="@+id/tvPostViewLocation"
-        tools:text="Ubicación del inmueble" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPostViewLocation" />
 
     <TextView
         android:id="@+id/tvPostViewTitle"
@@ -101,11 +90,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="2dp"
+        android:text="Descripción del post"
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@+id/view4"
-        app:layout_constraintTop_toBottomOf="@+id/tvPostViewDescription"
-        tools:text="Descripción del post" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPostViewDescription" />
 
     <TextView
         android:id="@+id/tvPostViewCharacteristics"
@@ -136,12 +125,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginBottom="92dp"
+        android:layout_marginBottom="24dp"
         android:text="Precio:"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
         app:layout_constraintStart_toStartOf="@+id/view4"
         app:layout_constraintTop_toTopOf="@+id/view4"
         app:layout_constraintVertical_bias="1.0" />
@@ -150,14 +139,14 @@
         android:id="@+id/tvPostPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Precio"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/tvPostViewPrice"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.59"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Precio" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tvTitlePost"
@@ -165,11 +154,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="2dp"
+        android:text="Título del post"
         android:textColor="@color/white2"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@+id/view4"
-        app:layout_constraintTop_toBottomOf="@+id/tvPostViewTitle"
-        tools:text="Título del post" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPostViewTitle" />
 
     <TextView
         android:id="@+id/tvPostCharacteristics"
@@ -177,21 +166,33 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="2dp"
+        android:text="Características del inmueble"
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@+id/view4"
-        app:layout_constraintTop_toBottomOf="@+id/tvPostViewCharacteristics"
-        tools:text="Características del inmueble" />
-        <com.example.mobileapp_plusroom.CustomBottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            app:elevation="1dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/bottom_menu" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPostViewCharacteristics" />
 
+    <com.example.mobileapp_plusroom.CustomBottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:elevation="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_menu" />
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="270dp"
+        android:layout_height="193dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/room" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

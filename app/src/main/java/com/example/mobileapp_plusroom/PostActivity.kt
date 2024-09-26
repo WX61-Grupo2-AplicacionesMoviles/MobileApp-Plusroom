@@ -28,6 +28,9 @@ class PostActivity : AppCompatActivity() {
             val targetActivity = when (item.itemId) {
                 R.id.bottom_home -> WelcomeActivity::class.java
                 R.id.bottom_profile -> ProfileActivity::class.java
+                R.id.bottom_search -> SearchActivity::class.java
+                R.id.bottom_add -> PostActivity::class.java
+                R.id.bottom_chat -> SendMessageActivity::class.java
                 else -> return@setOnItemSelectedListener false
             }
 //        viewAuthorProfile.setOnClickListener {

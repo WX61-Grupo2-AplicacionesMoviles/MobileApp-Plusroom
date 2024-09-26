@@ -8,11 +8,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class WelcomeActivity : AppCompatActivity() {
+class ListPostsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_welcome)
+        setContentView(R.layout.activity_list_posts)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -21,14 +21,15 @@ class WelcomeActivity : AppCompatActivity() {
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
+
         bottomNavigationView.setOnItemSelectedListener { item ->
             val currentActivity = this.javaClass
             val targetActivity = when (item.itemId) {
                 R.id.bottom_home -> WelcomeActivity::class.java
                 R.id.bottom_profile -> ProfileActivity::class.java
                 R.id.bottom_search -> SearchActivity::class.java
-                R.id.bottom_chat -> SendMessageActivity::class.java
                 R.id.bottom_add -> PostActivity::class.java
+                R.id.bottom_chat -> SendMessageActivity::class.java
                 else -> return@setOnItemSelectedListener false
             }
 
@@ -37,5 +38,5 @@ class WelcomeActivity : AppCompatActivity() {
             }
             true
         }
-        }
+    }
 }
