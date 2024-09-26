@@ -26,6 +26,7 @@ class WelcomeActivity : AppCompatActivity() {
             val targetActivity = when (item.itemId) {
                 R.id.bottom_home -> WelcomeActivity::class.java
                 R.id.bottom_profile -> ProfileActivity::class.java
+                R.id.bottom_search -> SearchActivity::class.java
                 else -> return@setOnItemSelectedListener false
             }
 
