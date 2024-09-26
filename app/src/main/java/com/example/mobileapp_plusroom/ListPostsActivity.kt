@@ -21,7 +21,7 @@ class ListPostsActivity : AppCompatActivity() {
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
-
+        bottomNavigationView.selectedItemId = R.id.bottom_profile
         bottomNavigationView.setOnItemSelectedListener { item ->
             val currentActivity = this.javaClass
             val targetActivity = when (item.itemId) {

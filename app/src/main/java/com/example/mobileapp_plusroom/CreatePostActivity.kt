@@ -21,7 +21,7 @@ class CreatePostActivity : AppCompatActivity() {
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
-
+        bottomNavigationView.selectedItemId = R.id.bottom_add
         bottomNavigationView.setOnItemSelectedListener { item ->
             val currentActivity = this.javaClass
             val targetActivity = when (item.itemId) {
@@ -29,6 +29,7 @@ class CreatePostActivity : AppCompatActivity() {
                 R.id.bottom_profile -> ProfileActivity::class.java
                 R.id.bottom_search -> CreatePostActivity::class.java
                 R.id.bottom_chat -> SendMessageActivity::class.java
+                R.id.bottom_add -> CreatePostActivity::class.java
                 else -> return@setOnItemSelectedListener false
             }
 
