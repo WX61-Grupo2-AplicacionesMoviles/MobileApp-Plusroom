@@ -9,6 +9,7 @@ import android.text.TextPaint
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -46,6 +47,15 @@ class RegisterActivity : AppCompatActivity() {
 
         textViewRegister.text = spannableString
         textViewRegister.movementMethod = LinkMovementMethod.getInstance()
+
+        val registerButton = findViewById<Button>(R.id.button)
+        registerButton.setOnClickListener {
+            val intent = Intent(
+                this@RegisterActivity,
+                WelcomeActivity::class.java
+            )
+            startActivity(intent)
+        }
     }
 
 
