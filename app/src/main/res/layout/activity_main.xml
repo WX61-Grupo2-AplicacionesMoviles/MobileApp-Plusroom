@@ -7,16 +7,58 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btSearchActivity"
+    <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="122dp"
-        android:layout_marginEnd="178dp"
-        android:backgroundTint="@color/blue60"
-        android:text="Go search"
+        app:srcCompat="@drawable/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5"
+        android:layout_marginBottom="16dp" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="115dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingTop="27dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="27dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:height="60dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="@string/log_in"
+            android:textColor="#427AA1"
+            app:cornerRadius="10dp"
+            app:strokeColor="#427AA1"
+            app:strokeWidth="2dp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#427AA1"
+            android:textColor="#FFFFFF"
+            android:text="@string/register"
+            app:cornerRadius="10dp" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
