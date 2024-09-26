@@ -52,7 +52,7 @@ class RegisterActivity : AppCompatActivity() {
         registerButton.setOnClickListener {
             val intent = Intent(
                 this@RegisterActivity,
-                WelcomeActivity::class.java
+                LoginActivity::class.java
             )
             startActivity(intent)
         }
