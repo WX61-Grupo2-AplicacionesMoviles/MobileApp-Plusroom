@@ -11,9 +11,7 @@ class CustomBottomNavigationView @JvmOverloads constructor(
 ) : BottomNavigationView(context, attrs, defStyleAttr) {
 
     init {
-        // Desactivar la escucha de insets para evitar el espacio adicional
         setOnApplyWindowInsetsListener(null)
-        // Establecer padding a 0
         setPadding(0, 0, 0, 0)
     }
 }
