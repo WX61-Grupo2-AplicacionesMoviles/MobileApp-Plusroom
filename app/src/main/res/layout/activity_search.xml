@@ -8,22 +8,6 @@
     android:background="#F7F8F3"
     tools:context=".SearchActivity">
 
-    <Button
-        android:id="@+id/btGotoReceivedMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="218dp"
-        android:layout_marginEnd="61dp"
-        android:layout_marginBottom="17dp"
-        android:backgroundTint="@color/white2"
-        android:textColor="@color/black"
-        app:icon="@android:drawable/sym_action_chat"
-        app:iconTint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Message" />
-
     <TextView
         android:id="@+id/tvCategory"
         android:layout_width="wrap_content"

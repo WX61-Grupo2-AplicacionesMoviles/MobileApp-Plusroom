@@ -54,12 +54,5 @@ class SearchActivity : AppCompatActivity() {
 
         }
 
-
-        val btReceivedMessage: Button = findViewById(R.id.btGotoReceivedMessage)
-
-//        btReceivedMessage.setOnClickListener {
-//            val intent = Intent(this, ReceivedMessageActivity::class.java)
-//            startActivity(intent)
-//        }
     }
 }
